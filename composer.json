@@ -1,5 +1,5 @@
 {
-    "name": "floatingpoint/stylist",
+    "name": "sref/stylist",
     "description": "Laravel 5 theming package.",
     "authors": [
         {
@@ -11,6 +11,9 @@
             "email": "mike@mjdugan.com"
         }
     ],
+    "replace": {
+        "floatingpoint/stylist": "*"
+    },
     "require": {
         "php": ">=5.5.0",
         "laravelcollective/html": "~5.0",
@@ -28,7 +31,14 @@
         }
     },
     "minimum-stability": "dev",
-	"config": {
-		"preferred-install": "dist"
-	}
+    "config": {
+        "preferred-install": "dist"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "FloatingPoint\\Stylist\\StylistServiceProvider"
+            ]
+        }
+    }
 }
